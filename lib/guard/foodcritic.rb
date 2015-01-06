@@ -1,4 +1,4 @@
-require "guard"
+require "guard/compat/plugin"
 
 module Guard
   class Foodcritic < Plugin

@@ -1,4 +1,5 @@
 require "spec_helper"
+require "guard/compat/test/helper"
 require "guard/foodcritic"
 
 module Guard
@@ -12,7 +13,7 @@ module Guard
 
     describe "#options" do
       it "[:all_on_start] defaults to true" do
-        described_class.new.options[:all_on_start].should be_true
+        described_class.new.options[:all_on_start].should be true
       end
 
       it "[:cookbook_paths] defaults to ['cookbooks']" do
@@ -20,7 +21,7 @@ module Guard
       end
 
       it "[:notification] defaults to true" do
-        described_class.new.options[:notification].should be_true
+        described_class.new.options[:notification].should be true
       end
     end
 

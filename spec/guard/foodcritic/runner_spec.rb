@@ -1,4 +1,5 @@
 require "spec_helper"
+require "guard/compat/test/helper"
 require "guard/foodcritic/runner"
 
 module Guard
@@ -45,12 +46,12 @@ module Guard
 
       it "returns true when foodcritic suceeds" do
         runner.stub(:system).and_return(true)
-        runner.run([]).should be_true
+        runner.run([]).should be true
       end
 
       it "returns false when foodcritic finds fault" do
         runner.stub(:system).and_return(false)
-        runner.run([]).should be_false
+        runner.run([]).should be false
       end
     end
   end
